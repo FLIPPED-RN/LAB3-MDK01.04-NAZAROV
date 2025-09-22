@@ -75,6 +75,9 @@ namespace LAB3_MDK01._04.NAZAROV.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("PriceListId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ProductCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

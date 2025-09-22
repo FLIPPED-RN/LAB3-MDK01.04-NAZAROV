@@ -5,7 +5,7 @@
 namespace LAB3_MDK01._04.NAZAROV.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitWithRelations : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -49,7 +49,8 @@ namespace LAB3_MDK01._04.NAZAROV.Migrations
                     ProductCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProductName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
-                    TotalPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    TotalPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    PriceListId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
